@@ -65,7 +65,7 @@
 
 static bool env_setup = false;
 
-void __main(void *pcb_ptr)
+void __pre_main(void *pcb_ptr, int *out_argc, char ***out_argv)
 {
 	/* Initialize user task run-time environment */
 	__malloc_init();
@@ -117,6 +117,16 @@ void __main(void *pcb_ptr)
 		vfs_root_set(inbox_get("root"));
 		(void) vfs_cwd_set(__pcb->cwd);
 	}
+	
+	*out_argc = argc;
+	*out_argv = argv;
+}
+
+void __main(void *pcb_ptr)
+{
+	int argc;
+	char **argv;
+	__pre_main(pcb_ptr, &argc, &argv);
 	
 	/*
 	 * Run main() and set task return value
