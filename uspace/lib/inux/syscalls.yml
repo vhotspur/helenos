@@ -1,0 +1,153 @@
+- syscall: brk
+  arguments: 1
+  id:
+    amd64: 45
+    arm32: 45
+    ia32: 45
+    ia64: 1060
+    mips32: 4045
+    mips32eb: 4045
+    ppc32: 45
+    sparc64: 17
+    abs32le: 45
+
+- syscall: close
+  arguments: 1
+  id:
+    amd64: 6
+    arm32: 6
+    ia32: 6
+    ia64: 1029
+    mips32: 4006
+    mips32eb: 4006
+    ppc32: 6
+    sparc64: 6
+    abs32le: 6
+
+- syscall: exit_group
+  arguments: 1
+  id:
+    amd64: 280
+    arm32: 248
+    ia32: 252
+    ia64: 1236
+    mips32: 4246
+    mips32eb: 4246
+    ppc32: 234
+    sparc64: 188
+    abs32le: 252
+
+- syscall: exit
+  arguments: 1
+  id:
+    amd64: 1
+    arm32: 1
+    ia32: 1
+    ia64: 1025
+    mips32: 4001
+    mips32eb: 4001
+    ppc32: 1
+    sparc64: 1
+    abs32le: 1
+
+- syscall: ioctl
+  arguments: 3
+  id:
+    amd64: 54
+    arm32: 54
+    ia32: 54
+    ia64: 1065
+    mips32: 4054
+    mips32eb: 4054
+    ppc32: 54
+    sparc64: 54
+    abs32le: 54
+
+- syscall: _llseek
+  arguments: 5
+  id:
+    arm32: 140
+    ia32: 140
+    mips32: 4140
+    mips32eb: 4140
+    ppc32: 140
+    abs32le: 140
+
+- syscall: madvise
+  arguments: 3
+  id:
+    amd64: 219
+    arm32: 220
+    ia32: 219
+    ia64: 1209
+    mips32: 4218
+    mips32eb: 4218
+    ppc32: 205
+    sparc64: 75
+    abs32le: 219
+
+- syscall: open
+  arguments: 3
+  id:
+    amd64: 5
+    arm32: 5
+    ia32: 5
+    ia64: 1028
+    mips32: 4005
+    mips32eb: 4005
+    ppc32: 5
+    sparc64: 5
+    abs32le: 5
+
+- syscall: readv
+  arguments: 3
+  id:
+    amd64: 145
+    arm32: 145
+    ia32: 145
+    ia64: 1146
+    mips32: 4145
+    mips32eb: 4145
+    ppc32: 145
+    sparc64: 120
+    abs32le: 145
+
+- syscall: read
+  arguments: 3
+  id:
+    amd64: 3
+    arm32: 3
+    ia32: 3
+    ia64: 1026
+    mips32: 4003
+    mips32eb: 4003
+    ppc32: 3
+    sparc64: 3
+    abs32le: 3
+
+- syscall: writev
+  arguments: 3
+  id:
+    amd64: 146
+    arm32: 146
+    ia32: 146
+    ia64: 1147
+    mips32: 4146
+    mips32eb: 4146
+    ppc32: 146
+    sparc64: 121
+    abs32le: 146
+
+- syscall: write
+  arguments: 3
+  id:
+    amd64: 4
+    arm32: 4
+    ia32: 4
+    ia64: 1027
+    mips32: 4004
+    mips32eb: 4004
+    ppc32: 4
+    sparc64: 4
+    abs32le: 4
+

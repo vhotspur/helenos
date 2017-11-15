@@ -244,6 +244,7 @@ LIBS = \
 	lib/pcm \
 	lib/pcut \
 	lib/bithenge \
+	lib/inux \
 	lib/posix \
 	lib/ieee80211
 

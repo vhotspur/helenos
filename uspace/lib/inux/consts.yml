@@ -1,0 +1,180 @@
+- constant: SEEK_CUR
+  value:
+    amd64: 1
+    arm32: 1
+    ia32: 1
+    ia64: 1
+    mips32: 1
+    mips32eb: 1
+    ppc32: 1
+    sparc64: 1
+    abs32le: 1
+
+- constant: SEEK_END
+  value:
+    amd64: 2
+    arm32: 2
+    ia32: 2
+    ia64: 2
+    mips32: 2
+    mips32eb: 2
+    ppc32: 2
+    sparc64: 2
+    abs32le: 2
+
+- constant: SEEK_SET
+  value:
+    amd64: 0x0
+    arm32: 0x0
+    ia32: 0x0
+    ia64: 0x0
+    mips32: 0x0
+    mips32eb: 0x0
+    ppc32: 0x0
+    sparc64: 0x0
+    abs32le: 0x0
+
+- constant: O_CREAT
+  value:
+    amd64: 0x40
+    arm32: 0x40
+    ia32: 0x40
+    ia64: 0x40
+    mips32: 0x100
+    mips32eb: 0x100
+    ppc32: 0x40
+    sparc64: 0x200
+    abs32le: 0x40
+
+- constant: O_RDONLY
+  value:
+    amd64: 0x0
+    arm32: 0x0
+    ia32: 0x0
+    ia64: 0x0
+    mips32: 0x0
+    mips32eb: 0x0
+    ppc32: 0x0
+    sparc64: 0x0
+    abs32le: 0x0
+
+- constant: O_RDWR
+  value:
+    amd64: 0x2
+    arm32: 0x2
+    ia32: 0x2
+    ia64: 0x2
+    mips32: 0x2
+    mips32eb: 0x2
+    ppc32: 0x2
+    sparc64: 0x2
+    abs32le: 0x2
+
+- constant: O_WRONLY
+  value:
+    amd64: 0x1
+    arm32: 0x1
+    ia32: 0x1
+    ia64: 0x1
+    mips32: 0x1
+    mips32eb: 0x1
+    ppc32: 0x1
+    sparc64: 0x1
+    abs32le: 0x1
+
+- constant: O_APPEND
+  value:
+    amd64: 0x400
+    arm32: 0x400
+    ia32: 0x400
+    ia64: 0x400
+    mips32: 0x8
+    mips32eb: 0x8
+    ppc32: 0x400
+    sparc64: 0x8
+    abs32le: 0x400
+
+- constant: O_TRUNC
+  value:
+    amd64: 0x200
+    arm32: 0x200
+    ia32: 0x200
+    ia64: 0x200
+    mips32: 0x200
+    mips32eb: 0x200
+    ppc32: 0x200
+    sparc64: 0x400
+    abs32le: 0x200
+
+- constant: O_LARGEFILE
+  value:
+    amd64: 0x8000
+    arm32: 0x20000
+    ia32: 0x8000
+    ia64: 0x8000
+    mips32: 0x2000
+    mips32eb: 0x2000
+    ppc32: 0x10000
+    sparc64: 0x40000
+    abs32le: 0x8000
+
+- constant: O_EXCL
+  value:
+    amd64: 0x80
+    arm32: 0x80
+    ia32: 0x80
+    ia64: 0x80
+    mips32: 0x400
+    mips32eb: 0x400
+    ppc32: 0x80
+    sparc64: 0x800
+    abs32le: 0x80
+
+- constant: EBADF
+  value:
+    amd64: 9
+    arm32: 9
+    ia32: 9
+    ia64: 9
+    mips32: 9
+    mips32eb: 9
+    ppc32: 9
+    sparc64: 9
+    abs32le: 9
+
+- constant: EINVAL
+  value:
+    amd64: 22
+    arm32: 22
+    ia32: 22
+    ia64: 22
+    mips32: 22
+    mips32eb: 22
+    ppc32: 22
+    sparc64: 22
+    abs32le: 22
+
+- constant: EMFILE
+  value:
+    amd64: 24
+    arm32: 24
+    ia32: 24
+    ia64: 24
+    mips32: 24
+    mips32eb: 24
+    ppc32: 24
+    sparc64: 24
+    abs32le: 24
+
+- constant: ENOSYS
+  value:
+    amd64: 38
+    arm32: 38
+    ia32: 38
+    ia64: 38
+    mips32: 89
+    mips32eb: 89
+    ppc32: 38
+    sparc64: 90
+    abs32le: 38
+
