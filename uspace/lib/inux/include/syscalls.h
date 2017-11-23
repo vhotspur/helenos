@@ -35,6 +35,9 @@
 
 #include <types/common.h>
 
+#define LIBINUX_SYSCALL(name, id, paramcount) /* empty */
+#include "syscall_def.h"
+
 #define DECLARE_LINUX_SYSCALL0(name) \
 	sysarg_t linux_syscall_wrapper_##name(void)
 #define DECLARE_LINUX_SYSCALL1(name) \

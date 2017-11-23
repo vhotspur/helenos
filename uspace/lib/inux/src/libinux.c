@@ -57,7 +57,7 @@ typedef struct {
 	};
 } syscall_handler_t;
 
-
+#undef LIBINUX_SYSCALL
 #define LIBINUX_SYSCALL(syscall_name, syscall_id, syscall_arg_count) \
 	extern DECLARE_LINUX_SYSCALL##syscall_arg_count(syscall_name);
 #include "syscall_def.h"
