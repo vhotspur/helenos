@@ -122,6 +122,16 @@
     sparc64: 5
     abs32le: 5
 
+- syscall: prlimit64
+  arguments: 4
+  id:
+    arm32: 369
+    ia32: 340
+    mips32: 4338
+    mips32eb: 4338
+    ppc32: 325
+    abs32le: 340
+
 - syscall: readv
   arguments: 3
   id:

@@ -42,6 +42,7 @@ SYSCALLS = \
     madvise \
     mmap2 \
     open \
+    prlimit \
     read \
     readv \
     rt_sigprocmask \
