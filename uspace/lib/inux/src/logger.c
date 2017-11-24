@@ -48,8 +48,9 @@
 
 static char logger_name[LOGGER_NAME_SIZE + 1];
 static log_level_t logger_level = LVL_NOTE;
+int logger_shall_print_stacktrace = 0;
 
-void logger_init()
+void logger_init(void)
 {
 	snprintf(logger_name, LOGGER_NAME_SIZE, "inux-T%lld", (long long) task_get_id());
 	log_init(logger_name);

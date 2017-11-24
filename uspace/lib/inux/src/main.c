@@ -77,6 +77,11 @@ void libinux_pre_main(void *pcb_ptr, int *argc_out, char ***argv_out)
 			default_level = level;
 			continue;
 		}
+		if (str_test_prefix(argv_all[i], "libinux_st=")) {
+			int value = (int) strtol(argv_all[i] + 11, NULL, 10);
+			logger_shall_print_stacktrace = !!value;
+		}
+
 
 		argv[argc] = argv_all[i];
 		argc++;

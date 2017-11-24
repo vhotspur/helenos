@@ -81,11 +81,8 @@ static syscall_handler_t handlers[] = {
 static sysarg_t handle_unknown_syscall(sysarg_t id, int size,
 	    sysarg_t *args)
 {
-	logger(LVL_ERROR, "unknown syscall %lld (with %d args)",
-	    (long long) id, size);
-	for (int i = 0; i < size; i++) {
-		logger(LVL_DEBUG, "libinux:   arg #%d: 0x%llx", i + 1, (long long) args[i]);
-	}
+	logger(LVL_ERROR, "Unknown syscall %lld, returning -ENOSYS (%d)",
+	    (long long) id, -LINUX_ENOSYS);
 	
 	return -LINUX_ENOSYS;
 }
@@ -100,16 +97,14 @@ sysarg_t libinux_syscall_handler(sysarg_t id, int size,
 	    sysarg_t a1, sysarg_t a2, sysarg_t a3,
 	    sysarg_t a4, sysarg_t a5, sysarg_t a6)
 {
-#ifdef LOG_ALL_SYSCALLS
-	printf("libinux_syscall_handler(syscall=%lld, args=%d, "
-	    "a1=0x%llx, a2=0x%llx, a3=0x%llx, "
-	    "a4=0x%llx, a5=0x%llx, a6=0x%llx)\n",
-	    (long long) id, size,
-		(long long) a1, (long long) a2, (long long) a3,
-		(long long) a4, (long long) a5, (long long) a6);
-	stacktrace_print();
-	fflush(stdout);
-#endif
+	logger(LVL_DEBUG, "SYSCALL%d(%lld, [ 0x%llx, 0x%llx, 0x%llx, 0x%llx, 0x%llx, 0x%llx ])",
+	    size, (long long) id,
+	    (long long) a1, (long long) a2, (long long) a3,
+	    (long long) a4, (long long) a5, (long long) a6);
+	if (logger_shall_print_stacktrace) {
+		stacktrace_print();
+		fflush(stdout);
+	}
 
 
 	syscall_handler_t *handler = NULL;

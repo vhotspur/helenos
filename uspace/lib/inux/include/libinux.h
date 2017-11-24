@@ -45,6 +45,7 @@ extern void libinux_pre_main(void *, int *, char ***);
 extern void logger_init(void);
 extern void logger_set_level(log_level_t);
 extern void logger(log_level_t, const char *, ...) PRINTF_ATTRIBUTE(2, 3);
+extern int logger_shall_print_stacktrace;
 
 
 #endif
