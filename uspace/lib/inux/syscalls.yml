@@ -96,6 +96,19 @@
     sparc64: 75
     abs32le: 219
 
+- syscall: mmap2
+  arguments: 6
+  id:
+    amd64: 192
+    arm32: 192
+    ia32: 192
+    ia64: 1172
+    mips32: 4210
+    mips32eb: 4210
+    ppc32: 192
+    sparc64: 56
+    abs32le: 192
+
 - syscall: open
   arguments: 3
   id:

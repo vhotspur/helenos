@@ -190,6 +190,18 @@
     sparc64: 24
     abs32le: 24
 
+- constant: ENOMEM
+  value:
+    amd64: 12
+    arm32: 12
+    ia32: 12
+    ia64: 12
+    mips32: 12
+    mips32eb: 12
+    ppc32: 12
+    sparc64: 12
+    abs32le: 12
+
 - constant: ENOSYS
   value:
     amd64: 38
@@ -201,4 +213,40 @@
     ppc32: 38
     sparc64: 90
     abs32le: 38
+
+- constant: MAP_ANONYMOUS
+  value:
+    amd64: 0x20
+    arm32: 0x20
+    ia32: 0x20
+    ia64: 0x20
+    mips32: 0x800
+    mips32eb: 0x800
+    ppc32: 0x20
+    sparc64: 0x20
+    abs32le: 0x20
+
+- constant: MAP_FIXED
+  value:
+    amd64: 0x10
+    arm32: 0x10
+    ia32: 0x10
+    ia64: 0x10
+    mips32: 0x10
+    mips32eb: 0x10
+    ppc32: 0x10
+    sparc64: 0x10
+    abs32le: 0x10
+
+- constant: MAP_PRIVATE
+  value:
+    amd64: 0x2
+    arm32: 0x2
+    ia32: 0x2
+    ia64: 0x2
+    mips32: 0x2
+    mips32eb: 0x2
+    ppc32: 0x2
+    sparc64: 0x2
+    abs32le: 0x2
 

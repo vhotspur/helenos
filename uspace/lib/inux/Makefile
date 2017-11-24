@@ -40,6 +40,7 @@ SYSCALLS = \
     ioctl \
     llseek \
     madvise \
+    mmap2 \
     open \
     read \
     readv \
