@@ -124,11 +124,13 @@ sysarg_t libinux_syscall_handler(sysarg_t id, int size,
 		return handle_unknown_syscall(id, size, args);
 	}
 
+	/*
+	 * Receiving less arguments is certainly a problem. Getting more is
+	 * actually okay if the expansion of an original macro appended zeros.
+	 */
 	if (size < handler->size) {
 		return handle_bad_invocation(id, handler->size, size, handler->name);
 	}
-
-	// TODO: perhpas warn on differing argument count
 
 	sysarg_t res;
 
