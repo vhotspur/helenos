@@ -43,6 +43,7 @@ SYSCALLS = \
     open \
     read \
     readv \
+    times \
     write \
     writev
 

@@ -135,6 +135,19 @@
     sparc64: 3
     abs32le: 3
 
+- syscall: times
+  arguments: 1
+  id:
+    amd64: 43
+    arm32: 43
+    ia32: 43
+    ia64: 1059
+    mips32: 4043
+    mips32eb: 4043
+    ppc32: 43
+    sparc64: 43
+    abs32le: 43
+
 - syscall: writev
   arguments: 3
   id:
