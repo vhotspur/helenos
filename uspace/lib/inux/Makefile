@@ -43,6 +43,8 @@ SYSCALLS = \
     open \
     read \
     readv \
+    rt_sigprocmask \
+    rt_sigaction \
     times \
     write \
     writev

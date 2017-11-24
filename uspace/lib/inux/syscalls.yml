@@ -135,6 +135,32 @@
     sparc64: 3
     abs32le: 3
 
+- syscall: rt_sigprocmask
+  arguments: 4
+  id:
+    amd64: 175
+    arm32: 175
+    ia32: 175
+    ia64: 1179
+    mips32: 4195
+    mips32eb: 4195
+    ppc32: 174
+    sparc64: 103
+    abs32le: 175
+
+- syscall: rt_sigaction
+  arguments: 4
+  id:
+    amd64: 174
+    arm32: 174
+    ia32: 174
+    ia64: 1177
+    mips32: 4194
+    mips32eb: 4194
+    ppc32: 173
+    sparc64: 102
+    abs32le: 174
+
 - syscall: times
   arguments: 1
   id:
