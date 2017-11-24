@@ -36,6 +36,7 @@ SYSCALLS = \
 	close \
     exit \
     exit_group \
+    fcntl \
     ioctl \
     llseek \
     madvise \

@@ -130,6 +130,30 @@
     sparc64: 0x800
     abs32le: 0x80
 
+- constant: F_GETFD
+  value:
+    amd64: 1
+    arm32: 1
+    ia32: 1
+    ia64: 1
+    mips32: 1
+    mips32eb: 1
+    ppc32: 1
+    sparc64: 1
+    abs32le: 1
+
+- constant: FD_CLOEXEC
+  value:
+    amd64: 1
+    arm32: 1
+    ia32: 1
+    ia64: 1
+    mips32: 1
+    mips32eb: 1
+    ppc32: 1
+    sparc64: 1
+    abs32le: 1
+
 - constant: EBADF
   value:
     amd64: 9

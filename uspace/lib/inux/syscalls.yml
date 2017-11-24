@@ -63,6 +63,16 @@
     sparc64: 54
     abs32le: 54
 
+- syscall: fcntl64
+  arguments: 3
+  id:
+    arm32: 221
+    ia32: 221
+    mips32: 4220
+    mips32eb: 4220
+    ppc32: 204
+    abs32le: 221
+
 - syscall: _llseek
   arguments: 5
   id:
