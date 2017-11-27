@@ -87,9 +87,9 @@ void libinux_pre_main(void *pcb_ptr, int *argc_out, char ***argv_out)
 		argc++;
 	}
 
-	logger(LVL_NOTE, "This is libinux on HelenOS!");
-
 	logger_set_level(default_level);
+
+	logger(LVL_NOTE, "This is libinux on HelenOS!");
 
 	*argc_out = argc;
 	*argv_out = argv;
