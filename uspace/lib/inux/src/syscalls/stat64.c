@@ -77,8 +77,6 @@ struct linux_stat {
 DEFINE_LINUX_SYSCALL2(stat64, const char *, filename, struct linux_stat *, res)
 {
 	logger(LVL_DEBUG, "stat64(\"%s\", %p)", filename, res);
-	stacktrace_print();
-	fflush(stdout);
 	
 	int handle = vfs_lookup(filename, WALK_REGULAR);
 	if (handle < 0) {
