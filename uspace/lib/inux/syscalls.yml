@@ -109,6 +109,19 @@
     sparc64: 56
     abs32le: 192
 
+- syscall: munmap
+  arguments: 2
+  id:
+    amd64: 91
+    arm32: 91
+    ia32: 91
+    ia64: 1152
+    mips32: 4091
+    mips32eb: 4091
+    ppc32: 91
+    sparc64: 73
+    abs32le: 91
+
 - syscall: open
   arguments: 3
   id:

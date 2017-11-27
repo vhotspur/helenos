@@ -41,6 +41,7 @@ SYSCALLS = \
     llseek \
     madvise \
     mmap2 \
+    munmap \
     open \
     prlimit \
     read \
