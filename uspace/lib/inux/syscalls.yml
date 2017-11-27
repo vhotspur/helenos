@@ -184,6 +184,16 @@
     sparc64: 102
     abs32le: 174
 
+- syscall: stat64
+  arguments: 2
+  id:
+    arm32: 195
+    ia32: 195
+    mips32: 4213
+    mips32eb: 4213
+    ppc32: 195
+    abs32le: 195
+
 - syscall: times
   arguments: 1
   id:

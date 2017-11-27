@@ -190,6 +190,18 @@
     sparc64: 24
     abs32le: 24
 
+- constant: ENOENT
+  value:
+    amd64: 2
+    arm32: 2
+    ia32: 2
+    ia64: 2
+    mips32: 2
+    mips32eb: 2
+    ppc32: 2
+    sparc64: 2
+    abs32le: 2
+
 - constant: ENOMEM
   value:
     amd64: 12

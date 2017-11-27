@@ -47,6 +47,7 @@ SYSCALLS = \
     readv \
     rt_sigprocmask \
     rt_sigaction \
+    stat64 \
     times \
     write \
     writev
