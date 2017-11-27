@@ -97,7 +97,7 @@ sysarg_t libinux_syscall_handler(sysarg_t id, int size,
 	    sysarg_t a1, sysarg_t a2, sysarg_t a3,
 	    sysarg_t a4, sysarg_t a5, sysarg_t a6)
 {
-	logger(LVL_DEBUG, "SYSCALL%d(%lld, [ 0x%llx, 0x%llx, 0x%llx, 0x%llx, 0x%llx, 0x%llx ])",
+	logger(LVL_DEBUG2, "SYSCALL%d(%lld, [ 0x%llx, 0x%llx, 0x%llx, 0x%llx, 0x%llx, 0x%llx ]) ...",
 	    size, (long long) id,
 	    (long long) a1, (long long) a2, (long long) a3,
 	    (long long) a4, (long long) a5, (long long) a6);
@@ -156,8 +156,8 @@ sysarg_t libinux_syscall_handler(sysarg_t id, int size,
 		res = -LINUX_ENOSYS;
 	}
 
-	logger(LVL_NOTE, "SYSCALL(syscall=%lld [%s]) = %llx",
-	    (long long) id, handler->name, (long long) res);
+	logger(LVL_DEBUG2, "  ... SYSCALL%d(syscall=%lld [%s]) = 0x%llx",
+	    size, (long long) id, handler->name, (long long) res);
 
 	return res;
 }

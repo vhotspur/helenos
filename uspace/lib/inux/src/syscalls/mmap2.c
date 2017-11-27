@@ -65,7 +65,7 @@ DEFINE_LINUX_SYSCALL6(mmap2, void *, addr, size_t, len,
 	}
 
 	uint8_t *result = as_area_create(AS_AREA_ANY, len, AS_AREA_READ | AS_AREA_WRITE | AS_AREA_CACHEABLE, 0);
-	logger(LVL_DEBUG, "mmap2::as_area_create() = %p", result);
+	logger(LVL_DEBUG2, "  mmap2::as_area_create() = %p", result);
 	if (result == AS_MAP_FAILED) {
 		return -LINUX_ENOMEM;
 	}

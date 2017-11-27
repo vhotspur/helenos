@@ -63,7 +63,7 @@ void libinux_pre_main(void *pcb_ptr, int *argc_out, char ***argv_out)
 
 	logger_init();
 
-	log_level_t default_level = LVL_NOTE;
+	log_level_t default_level = LVL_WARN;
 
 	int argc = 0;
 	for (int i = 0; i < argc_all; i++) {
@@ -87,7 +87,7 @@ void libinux_pre_main(void *pcb_ptr, int *argc_out, char ***argv_out)
 		argc++;
 	}
 
-	logger(LVL_FATAL, "This is libinux on HelenOS!");
+	logger(LVL_NOTE, "This is libinux on HelenOS!");
 
 	logger_set_level(default_level);
 
