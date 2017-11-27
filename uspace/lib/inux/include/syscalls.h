@@ -80,7 +80,7 @@
 		return linux_syscall_##name((p1t) a1, (p2t) a2); \
 	} \
 	\
-	sysarg_t linux_syscall_##name(p1t p1n, p2t p2n, p3t p3n)
+	sysarg_t linux_syscall_##name(p1t p1n, p2t p2n)
 
 #define DEFINE_LINUX_SYSCALL3(name, p1t, p1n, p2t, p2n, p3t, p3n) \
 	DECLARE_LINUX_SYSCALL3(name); \
