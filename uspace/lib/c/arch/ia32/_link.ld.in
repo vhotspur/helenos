@@ -78,7 +78,7 @@ SECTIONS {
 #endif
 	
 	.data : {
-		*(.data);
+		*(.data .data.*);
 	} :data
 	
 #if defined(SHLIB) || defined(DLEXE)
@@ -112,7 +112,7 @@ SECTIONS {
 	.bss : {
 		*(.dynbss);
 		*(COMMON);
-		*(.bss);
+		*(.bss .bss.*);
 	} :data
 	
 #ifdef CONFIG_LINE_DEBUG
