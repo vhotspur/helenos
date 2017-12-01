@@ -37,8 +37,7 @@ SECTIONS {
 	. = . + 0x1000;
 	
 	.data : {
-		*(.data);
-		*(.data.rel*);
+		*(.data .data.*);
 	} :data
 	
 	.tdata : {
@@ -54,7 +53,7 @@ SECTIONS {
 	
 	.bss : {
 		*(COMMON);
-		*(.bss);
+		*(.bss .bss.*);
 	} :data
 	
 #ifdef CONFIG_LINE_DEBUG
