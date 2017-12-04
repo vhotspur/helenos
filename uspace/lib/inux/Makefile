@@ -32,6 +32,7 @@ EXTRA_CFLAGS += \
 	-Iinclude
 
 SYSCALLS = \
+	access \
 	brk \
 	close \
     exit \

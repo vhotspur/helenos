@@ -1,3 +1,16 @@
+- syscall: access
+  arguments: 2
+  id:
+    amd64: 33
+    arm32: 33
+    ia32: 33
+    ia64: 1049
+    mips32: 4033
+    mips32eb: 4033
+    ppc32: 33
+    sparc64: 33
+    abs32le: 33
+
 - syscall: brk
   arguments: 1
   id:
