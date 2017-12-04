@@ -83,6 +83,16 @@
     ppc32: 140
     abs32le: 140
 
+- syscall: lstat64
+  arguments: 2
+  id:
+    arm32: 196
+    ia32: 196
+    mips32: 4214
+    mips32eb: 4214
+    ppc32: 196
+    abs32le: 196
+
 - syscall: madvise
   arguments: 3
   id:

@@ -74,10 +74,8 @@ struct linux_stat {
 	struct linux_timespec st_ctim;  /* Time of last status change */
 };
 
-DEFINE_LINUX_SYSCALL2(stat64, const char *, filename, struct linux_stat *, res)
+static int do_stat(const char *filename, struct linux_stat * res)
 {
-	logger(LVL_DEBUG, "stat64(\"%s\", %p)", filename, res);
-	
 	int handle = vfs_lookup(filename, WALK_REGULAR);
 	if (handle < 0) {
 		return -LINUX_ENOENT;
@@ -110,6 +108,20 @@ DEFINE_LINUX_SYSCALL2(stat64, const char *, filename, struct linux_stat *, res)
 	vfs_put(handle);
 
 	return 0;
+}
+
+DEFINE_LINUX_SYSCALL2(stat64, const char *, filename, struct linux_stat *, res)
+{
+	logger(LVL_DEBUG, "stat64(\"%s\", %p)", filename, res);
+
+	return do_stat(filename, res);
+}
+
+DEFINE_LINUX_SYSCALL2(lstat64, const char *, filename, struct linux_stat *, res)
+{
+	logger(LVL_DEBUG, "lstat64(\"%s\", %p)", filename, res);
+
+	return do_stat(filename, res);
 }
 
 /** @}
