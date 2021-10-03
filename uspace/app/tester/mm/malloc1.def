@@ -1,6 +1,0 @@
-{
-	"malloc1",
-	"Memory allocator test",
-	&test_malloc1,
-	true
-},

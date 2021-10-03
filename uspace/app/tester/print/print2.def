@@ -1,6 +1,0 @@
-{
-	"print2",
-	"Numeric printf test",
-	&test_print2,
-	true
-},
