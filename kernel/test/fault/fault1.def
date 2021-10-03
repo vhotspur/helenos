@@ -1,6 +1,0 @@
-{
-	"fault1",
-	"Write to NULL (maybe page fault)",
-	&test_fault1,
-	false
-},

@@ -1,6 +1,0 @@
-{
-	"thread1",
-	"Thread test",
-	&test_thread1,
-	true
-},
