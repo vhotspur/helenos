@@ -1,6 +1,0 @@
-{
-	"malloc2",
-	"Memory reservation feature test",
-	&test_malloc2,
-	false
-},

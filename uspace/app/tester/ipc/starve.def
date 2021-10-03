@@ -1,6 +1,0 @@
-{
-	"starve",
-	"Demonstrate starving IPC",
-	&test_starve_ipc,
-	true
-},

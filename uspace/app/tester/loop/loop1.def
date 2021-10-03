@@ -1,6 +1,0 @@
-{
-	"loop1",
-	"Endless loop",
-	&test_loop1,
-	false
-},

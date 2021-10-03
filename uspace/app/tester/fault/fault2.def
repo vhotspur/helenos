@@ -1,6 +1,0 @@
-{
-	"fault2",
-	"Unaligned read",
-	&test_fault2,
-	false
-},

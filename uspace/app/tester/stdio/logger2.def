@@ -1,6 +1,0 @@
-{
-	"logger2",
-	"Logger endless test",
-	&test_logger2,
-	false
-},

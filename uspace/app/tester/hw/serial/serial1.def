@@ -1,6 +1,0 @@
-{
-	"serial1",
-	"Serial loopback test",
-	&test_serial1,
-	false
-},

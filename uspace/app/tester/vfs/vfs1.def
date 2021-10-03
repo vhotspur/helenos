@@ -1,6 +1,0 @@
-{
-	"vfs1",
-	"VFS test",
-	&test_vfs1,
-	true
-},
