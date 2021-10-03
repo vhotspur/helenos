@@ -1,5 +1,0 @@
-(
-	[fnc.vfs_grab_phone] ;
-	!fs.open_node ;
-	[fnc.vfs_release_phone]
-)

@@ -1,3 +1,0 @@
-[devmap_get_phone] ;
-!devmap.DEVMAP_DEVICE_GET_DEVICES ;
-!devmap.IPC_M_DATA_READ

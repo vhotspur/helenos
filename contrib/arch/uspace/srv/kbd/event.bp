@@ -1,7 +1,0 @@
-?ipc_m_connect_me_to ;
-?event {
-	tentative {
-		!sys_console.sys_enable_console
-	}
-}* ;
-?ipc_m_phone_hungup
