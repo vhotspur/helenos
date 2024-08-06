@@ -5,10 +5,18 @@ style:
   script:
     - make ccheck
 
-build-ia32:
-  image: ghcr.io/vhotspur/helenos-build-env-ia32:v2.1.0
+.build-template:
+  image: ghcr.io/vhotspur/helenos-build-env-${IMAGE_ARCH}:v2.1.0
   script:
-    - mkdir build-ia32
-    - cd build-ia32
-    - ../configure.sh ia32
+    - mkdir ${ARCH_BUILDDIR}
+    - cd ${ARCH_BUILDDIR}
+    - ../configure.sh ${ARCH_NAME}
     - ninja image_path
+
+build-ia32:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: ia32
+    ARCH_BUILDDIR: build-ia32
+    ARCH_NAME: ia32
+
