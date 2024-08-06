@@ -1,0 +1,14 @@
+
+
+style:
+  image: ghcr.io/vhotspur/helenos-build-env-base:v2.1.0
+  script:
+    - make ccheck
+
+build-ia32:
+  image: ghcr.io/vhotspur/helenos-build-env-ia32:v2.1.0
+  script:
+    - mkdir build-ia32
+    - cd build-ia32
+    - ../configure.sh ia32
+    - ninja image_path
