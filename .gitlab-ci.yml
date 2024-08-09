@@ -10,11 +10,12 @@ style:
   variables:
     IMAGE_VERSION: v3.0.1
   image: ghcr.io/vhotspur/helenos-build-env-${IMAGE_ARCH}:${IMAGE_VERSION}
-  script:
+  before_script:
     - echo PROFILE_NAME=${PROFILE_NAME}
     - echo IMAGE_ARCH=${IMAGE_ARCH}
     - echo IMAGE_VERSION=${IMAGE_VERSION}
     - ninja --version
+  script:
     - mkdir build && cd build
     - ../configure.sh ${PROFILE_NAME}
     - ninja
