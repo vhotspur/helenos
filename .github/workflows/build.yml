@@ -10,8 +10,42 @@ jobs:
         config:
           - image: amd64
             profile: amd64
+          - image: arm32
+            profile: arm32/beagleboardxm
+          - image: arm32
+            profile: arm32/beaglebone
+          - image: arm32
+            profile: arm32/gta02
+          - image: arm32
+            profile: arm32/integratorcp
+          - image: arm32
+            profile: arm32/raspberrypi
+          - image: arm64
+            profile: arm64/hikey960
+          - image: arm64
+            profile: arm64/virt
+          - image: ia32
+            profile: ia32
+          - image: ia64
+            profile: ia64/i460GX
+          - image: ia64
+            profile: ia64/ski
+          - image: mips32eb
+            profile: mips32/malta-be
+          - image: mips32
+            profile: mips32/malta-le
           - image: mips32
             profile: mips32/msim
+          - image: ppc32
+            profile: ppc32
+          - image: riscv64
+            profile: riscv64
+          - image: sparc64
+            profile: sparc64/niagara
+          - image: sparc64
+            profile: sparc64/ultra
+          - image: ia32
+            profile: special/abs32le
 
     runs-on: ubuntu-latest
     container: "ghcr.io/vhotspur/helenos-build-env-${{ matrix.config.image }}:v3.0.1"
