@@ -54,10 +54,14 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
 
+      - name: Prepare build directory
+        run: mkdir build && cd build
+
+      - name: Configure HelenOS
+        run: ../configure.sh ${{ matrix.config.profile }}
+
       - name: Build HelenOS
-        run: |
-          mkdir build
-          cd build
-          ../configure.sh ${{ matrix.config.profile }}
-          ninja
-          ninja image_path
+        run: ninja
+
+      - name: Create bootable image
+        run: ninja image_path
