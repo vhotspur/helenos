@@ -64,7 +64,7 @@ jobs:
         run: mkdir build && cd build
 
       - name: Configure HelenOS
-        run:  cd build ../configure.sh ${{ matrix.config.profile }}
+        run:  cd build && ../configure.sh ${{ matrix.config.profile }}
 
       - name: Build HelenOS
         run: cd build && ninja
