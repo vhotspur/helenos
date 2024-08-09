@@ -58,15 +58,16 @@ jobs:
         run: |
           echo PROFILE_NAME=${{ matrix.config.profile }}
           echo IMAGE_ARCH=${{ matrix.config.image }}
+          ninja --version
 
       - name: Prepare build directory
         run: mkdir build && cd build
 
       - name: Configure HelenOS
-        run: ../configure.sh ${{ matrix.config.profile }}
+        run:  cd build ../configure.sh ${{ matrix.config.profile }}
 
       - name: Build HelenOS
-        run: ninja
+        run: cd build && ninja
 
       - name: Create bootable image
-        run: ninja image_path
+        run: cd build && ninja image_path
