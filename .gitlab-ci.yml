@@ -1,22 +1,20 @@
 
 
 style:
-  image: ghcr.io/vhotspur/helenos-build-env-base:v2.1.0
+  image: ghcr.io/vhotspur/helenos-build-env-base:v3.0.1
   script:
     - make ccheck
 
 .build-template:
-  image: ghcr.io/vhotspur/helenos-build-env-${IMAGE_ARCH}:v2.1.0
+  image: ghcr.io/vhotspur/helenos-build-env-${IMAGE_ARCH}:v3.0.1
   script:
-    - mkdir ${ARCH_BUILDDIR}
-    - cd ${ARCH_BUILDDIR}
-    - ../configure.sh ${ARCH_NAME}
+    - mkdir build && cd build
+    - ../configure.sh ${PROFILE_NAME}
     - ninja image_path
 
 build-ia32:
   extends: .build-template
   variables:
     IMAGE_ARCH: ia32
-    ARCH_BUILDDIR: build-ia32
-    ARCH_NAME: ia32
+    PROFILE_NAME: ia32
 
