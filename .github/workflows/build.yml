@@ -2,9 +2,6 @@ name: Build
 
 on: [push, pull_request]
 
-env:
-  image_version: v3.0.1
-
 jobs:
   build:
     strategy:
@@ -51,7 +48,7 @@ jobs:
             profile: special/abs32le
 
     runs-on: ubuntu-latest
-    container: "ghcr.io/vhotspur/helenos-build-env-${{ matrix.config.image }}:${{ env.image_version }}"
+    container: "ghcr.io/vhotspur/helenos-build-env-${{ matrix.config.image }}:v3.0.1"
 
     steps:
       - name: Git checkout
@@ -61,7 +58,6 @@ jobs:
         run: |
           echo PROFILE_NAME=${{ matrix.config.profile }}
           echo IMAGE_ARCH=${{ matrix.config.image }}
-          echo IMAGE_VERSION=${{ env.image_version }}
 
       - name: Prepare build directory
         run: mkdir build && cd build
