@@ -1,0 +1,14 @@
+name: Style checks
+
+on: [push, pull_request]
+
+jobs:
+  sycek:
+    runs-on: ubuntu-latest
+    container: "ghcr.io/vhotspur/helenos-build-env-base:v3.0.0"
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - name: make ccheck
+        run: make ccheck
