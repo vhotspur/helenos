@@ -5,6 +5,7 @@ style:
   script:
     - make ccheck
 
+
 .build-template:
   variables:
     IMAGE_VERSION: v3.0.1
@@ -19,14 +20,117 @@ style:
     - ninja
     - ninja image_path
 
+
+build-amd64:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: amd64
+    PROFILE_NAME: amd64
+
+build-arm32-beagleboardxm:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: arm32
+    PROFILE_NAME: arm32/beagleboardxm
+
+build-arm32-beaglebone:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: arm32
+    PROFILE_NAME: arm32/beaglebone
+
+build-arm32-gta02:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: arm32
+    PROFILE_NAME: arm32/gta02
+
+build-arm32-integratorcp:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: arm32
+    PROFILE_NAME: arm32/integratorcp
+
+build-arm32-raspberrypi:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: arm32
+    PROFILE_NAME: arm32/raspberrypi
+
+build-arm64-hikey960:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: arm64
+    PROFILE_NAME: arm64/hikey960
+
+build-arm64-virt:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: arm64
+    PROFILE_NAME: arm64/virt
+
 build-ia32:
   extends: .build-template
   variables:
     IMAGE_ARCH: ia32
     PROFILE_NAME: ia32
 
+build-ia64-i460GX:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: ia64
+    PROFILE_NAME: ia64/i460GX
+
+build-ia64-ski:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: ia64
+    PROFILE_NAME: ia64/ski
+
+build-mips32-malta-be:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: mips32
+    PROFILE_NAME: mips32/malta-be
+
+build-mips32-malta-le:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: mips32
+    PROFILE_NAME: mips32/malta-le
+
 build-mips32-msim:
   extends: .build-template
   variables:
     IMAGE_ARCH: mips32
     PROFILE_NAME: mips32/msim
+
+build-ppc32:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: ppc32
+    PROFILE_NAME: ppc32
+
+build-riscv64:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: riscv64
+    PROFILE_NAME: riscv64
+
+build-sparc64-niagara:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: sparc64
+    PROFILE_NAME: sparc64/niagara
+
+build-sparc64-ultra:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: sparc64
+    PROFILE_NAME: sparc64/ultra
+
+build-special-abs32le:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: ia32
+    PROFILE_NAME: special/abs32le
