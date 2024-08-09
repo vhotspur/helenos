@@ -15,7 +15,6 @@ jobs:
 
     runs-on: ubuntu-latest
     container: "ghcr.io/vhotspur/helenos-build-env-${{ matrix.config.image }}:v3.0.1"
-    continue-on-error: true
 
     steps:
       - name: Git checkout
