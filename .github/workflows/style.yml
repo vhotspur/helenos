@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   sycek:
     runs-on: ubuntu-latest
-    container: "ghcr.io/vhotspur/helenos-build-env-base:v3.0.0"
+    container: "ghcr.io/vhotspur/helenos-build-env-base:v3.1.0"
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
