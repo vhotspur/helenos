@@ -91,7 +91,7 @@ build-ia64-ski:
 build-mips32-malta-be:
   extends: .build-template
   variables:
-    IMAGE_ARCH: mips32
+    IMAGE_ARCH: mips32eb
     PROFILE_NAME: mips32/malta-be
 
 build-mips32-malta-le:
