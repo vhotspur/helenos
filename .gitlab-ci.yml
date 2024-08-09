@@ -25,3 +25,8 @@ build-ia32:
     IMAGE_ARCH: ia32
     PROFILE_NAME: ia32
 
+build-mips32-msim:
+  extends: .build-template
+  variables:
+    IMAGE_ARCH: mips32
+    PROFILE_NAME: mips32/msim
