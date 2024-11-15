@@ -48,7 +48,7 @@ jobs:
             profile: special/abs32le
 
     runs-on: ubuntu-latest
-    container: "ghcr.io/vhotspur/helenos-build-env-${{ matrix.config.image }}:v3.1.0"
+    container: "ghcr.io/vhotspur/helenos-build-env-${{ matrix.config.image }}:v3.2.1"
 
     steps:
       - name: Git checkout
